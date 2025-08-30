@@ -1,21 +1,13 @@
-## 本项目完整源码是收费的  接毕业设计和论文
 
-### 作者微信：grapro666 QQ：3642795578 (支持部署调试、支持代做毕设)
+<p><h1 align="center">基于Java+Springboot+vue3+小程序的宠物店小程序系统</h1></p>
 
-### 接javaweb、python、小程序、H5、APP、各种管理系统、单片机、嵌入式等开发
+- <b>完整代码获取地址：从戎源码网 ([https://armycodes.com/](https://armycodes.com/))</b>
+- <b>技术探讨、资料分享，请加QQ群：692619798</b> 
+- <b>作者微信：19941326836  QQ：952045282</b> 
+- <b>承接计算机毕业设计、Java毕业设计、Python毕业设计、深度学习、机器学习</b>
+- <b>选题+开题报告+任务书+程序定制+安装调试+论文+答辩ppt 一条龙服务</b>
+- <b>所有选题地址 ([https://github.com/YuLin-Coder/AllProjectCatalog](https://github.com/YuLin-Coder/AllProjectCatalog)) </b>
 
-### 选题+开题报告+任务书+程序定制+安装调试+论文+答辩ppt
-
-**博客地址：
-[https://blog.csdn.net/2303_76227485/article/details/142091684](https://blog.csdn.net/2303_76227485/article/details/142091684)**
-
-**视频演示：
-[https://www.bilibili.com/video/BV1uepseTEy5/](https://www.bilibili.com/video/BV1uepseTEy5/)**
-
-**毕业设计所有选题地址：
-[https://github.com/giteecode/allProject](https://github.com/giteecode/allProject)**
-
-## 基于Java+Springboot+vue3+小程序的宠物店小程序系统(源代码+数据库)171
 
 ## 一、系统介绍
 本项目前后端分离(可以改为ssm版本)，分为用户、店员、管理员三种角色
