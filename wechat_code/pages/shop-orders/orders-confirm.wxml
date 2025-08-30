@@ -1,0 +1,49 @@
+<view class="submit-container">
+    <view class="content">
+    <view class="address" >
+        <view class="address-info" wx:if="{{address.length!=0}}" bind:tap="addressTap">
+            <view wx:for="{{address}}" wx:key="index">
+                <view>{{item.name}}{{item.phone}} </view>
+                <view class="address-edit">
+                    <view>{{item.address}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="nodata" wx:if="{{address.length==0}}">
+            <view style="color:rgb(183, 183, 183)" bind:tap="addressTap">请输入地址</view>
+        </view>
+    </view>
+        <view class=" shop-list ">
+            <view style="font-size: 34rpx; font-weight: 400; padding: 10rpx;">购买清单</view>
+            <view class="tab-header">
+                <view>商品名称</view>
+                <view>商品图片</view>
+                <view>{{types==2?'积分':'价格'}}</view>
+                <view>数量</view>
+                <view> {{types==2?'积分':'总价'}}</view>
+            </view>
+            <view class="shop-item" wx:for="{{orderGoods}}" wx:key="index">
+                <view class="name">{{item.goodname}}
+                    <br />
+                    <view wx:if="{{types==1}}"> 选座{{item.address}}</view>
+                </view>
+                <view>
+                    <image class="shop-img" src="{{baseURL+item.picture}}" mode="aspectFill" />
+                </view>
+                <view class="price">￥{{item.price}}</view>
+                <view class="num">x{{item.buynumber}}</view>
+                <view class="total">￥{{item.price}}</view>
+            </view>
+    <view style=" border-top: 2rpx solid #eee;padding: 20rpx; ">
+        <view style="margin-bottom: 20rpx;">备注</view>
+        <textarea class="remark"  model:value="{{remark}}" placeholder="请输入备注" />
+    </view>
+<view class="total-box">合计：<view style="font-size: 34rpx;font-weight: 400;color: rgb(226, 35, 26)">{{total}}{{types==2?'积分':''}}</view>
+            </view>
+            <view class="pay-box">
+                <button   bind:tap="payClick"   type="primary">余额支付</button>
+
+            </view>
+        </view>
+    </view>
+</view>

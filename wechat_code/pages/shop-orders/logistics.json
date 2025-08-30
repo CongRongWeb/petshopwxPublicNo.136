@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-tabs": "/component/com-tabs/com-tabs"
+  },
+  "navigationBarTitleText": "物流信息",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

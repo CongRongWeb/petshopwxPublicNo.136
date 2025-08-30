@@ -1,0 +1,12 @@
+<view class="content">
+    <view wx:if="{{!changeSuccess}}">
+        <view class="uni-form-item uni-column">
+            <input model:value="{{money}}" type="number" class="uni-input" name="" placeholder="请输入要充值的数量" />
+        </view>
+        <button type="primary" style="background: rgb(180, 153, 80);" bindtap="onResetPass">提交</button>
+    </view>
+    <view wx:if="{{changeSuccess}}">
+        <view class="text-reset">充值成功！</view>
+        <button type="primary" bindtap="back">返回</button>
+    </view>
+</view>

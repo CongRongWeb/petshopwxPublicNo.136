@@ -1,0 +1,32 @@
+.pay-container {
+width: 100vw;
+height: 100vh;
+background-color: rgb(241, 241, 241);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.pay-list {
+display: flex;
+flex-direction: column;
+}
+
+.pay-content {
+/* height: calc(100vh - 88rpx); */
+width: calc(100vw - 88rpx);
+background-color: rgb(255, 255, 255);
+}
+
+.img {
+width: 25vw;
+height: 10vh;
+}
+
+.pay-item {
+border-bottom: 2rpx solid #eee;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20rpx;
+}

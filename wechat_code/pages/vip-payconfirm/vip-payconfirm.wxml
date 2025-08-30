@@ -1,0 +1,15 @@
+<view class="pay-container">
+    <view class="pay-content">
+        <view class="pay-type-item" style="padding: 20rpx;">
+            <text>会员卡：<text style="font-size: 22upx;">￥</text>199/年</text>
+        </view>
+        <radio-group class="pay-list" bindchange="payTap" value="{{defaultSel}}" class="radio-box">
+            <view class="pay-item" wx:for="{{list}}" wx:key="index">
+                <image class="img" mode="aspectFit" src="../../static/{{item.name}}.png"></image>
+                <radio value="{{item.value}}" checked="{{item.value==defaultSel}}"> </radio>
+            </view>
+        </radio-group>
+        <button type="primary" style="margin-top: 20rpx;color: #FFD;background: red;" bind:tap="onPageTap" >确定</button>
+
+    </view>
+</view>

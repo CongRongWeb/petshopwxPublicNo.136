@@ -1,0 +1,57 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">服务标题</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.fuwubiaoti==true}}"  placeholder="服务标题" model:value="{{fuwubiaoti}}" />
+</view>
+<view class="item-box"    bindtap="uploadfuwutupian">
+<view   class="item-label">服务图片</view>
+<image  src="{{fuwutupianPath?fuwutupianPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+<view class="item-label">价格</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.jiage==true}}"  placeholder="价格" model:value="{{jiage}}" />
+</view>
+<view class="item-box">
+<view class="item-label">会员账号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.huiyuanzhanghao==true}}"  placeholder="会员账号" model:value="{{huiyuanzhanghao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">手机</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.shouji==true}}"  placeholder="手机" model:value="{{shouji}}" />
+</view>
+<view class="item-box">
+<view class="item-label">会员姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.huiyuanxingming==true}}"  placeholder="会员姓名" model:value="{{huiyuanxingming}}" />
+</view>
+<view class="item-box"  >
+<view class="item-label">预约时间</view>
+<view class="down-item-picker"  bindtap="onyuyueshijianTap">
+<view class="item-input" >         {{yuyueshijian}}</view>
+</view>
+</view>
+<com-date isShowPicker="{{showyuyueshijian}}" bind:dateHandler="yuyueshijianTap"></com-date>
+
+
+
+</view>
+
+
+<view class="btn-box">
+
+
+
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

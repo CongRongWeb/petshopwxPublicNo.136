@@ -1,0 +1,93 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#ffffff'   indicator-active-color="#ff746d"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="{{index}}">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+
+
+
+
+
+
+<view class="detail-box">
+
+<view class="detail-item-box" >
+<view class="detail-item-label">服务标题：</view>
+<view class="detail-item-text">{{detailList.fuwubiaoti}}</view>
+</view>
+<view class="detail-detail-img-box">
+<view class="detail-item-label">服务图片：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.fuwutupian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">价格：</view>
+<view class="detail-item-text">{{detailList.jiage}}</view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">会员账号：</view>
+<view class="detail-item-text">{{detailList.huiyuanzhanghao}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">手机：</view>
+<view class="detail-item-text">{{detailList.shouji}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">会员姓名：</view>
+<view class="detail-item-text">{{detailList.huiyuanxingming}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">预约时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+<button class="pay" bind:tap="onPayTap" wx:if="{{detailList.ispay=='支付'}}">支付</button>
+<button class="pay" bind:tap="onPayTap" wx:if="{{detailList.ispay=='未支付'}}">支付</button>
+<button class="pay"  wx:if="{{detailList.ispay=='已支付'}}">已支付</button>
+
+
+
+
+
+
+</view>
+
+</view>
+</view>

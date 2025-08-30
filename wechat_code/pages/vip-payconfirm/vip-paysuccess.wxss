@@ -1,0 +1,6 @@
+.content {
+height: 60vh;
+text-align: center;
+line-height: 20vh;
+}
+

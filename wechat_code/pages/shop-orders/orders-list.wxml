@@ -1,0 +1,60 @@
+<mp-tabs tabs="{{tabs}}" swiperClass="ref-tabs" activeTab="{{activeTab}}" bindtabclick="onTabCLick" bindchange="onChange">
+    <block wx:for="{{tabs}}" wx:key="index">
+        <view slot="tab-content-{{index}}">
+            <scroll-view scroll-y="true" style="height: 98vh;">
+                <view class="goods-item" wx:for="{{curList}}" index="key">
+                    <view class="status-orderId">
+                        <view class="{{item.status=='未支付'?'text-red':'text-green'}}">{{item.status}}</view>
+                        <view class="orderId">{{item.orderid}}</view>
+                    </view>
+                    <view class="order-content">
+                        <view class="order-model">
+                            <!-- <view class="order-img"></view> -->
+                            <image class="order-img" src="{{baseURL+item.picture}}" mode="aspectFit" />
+                            <view class="order-info">
+                                <view class="name">{{item.goodname}}</view>
+                                <view class="buy-num">x{{item.buynumber}}</view>
+                                <view class="price">￥{{item.price}}</view>
+                            </view>
+                        </view>
+                        <view class="user-info">
+                            <view wx:if="{{item.consignee}}">收货人：{{item.consignee}}</view>
+                            <view wx:if="{{item.tel}}">电话：{{item.tel}}</view>
+                            <view wx:if="{{item.address}}">地址：{{item.address}}</view>
+                            <view wx:if="{{item.addtime}}">下单时间：{{item.addtime}}</view>
+
+<view>备注：{{item.remark}}</view>
+
+                            <view>合计：{{item.total}}</view>
+                        </view>
+                        <view class="operate-btn" wx:if="{{item.status=='未支付'}}">
+                            <view class="btn" bind:tap="payTap">支付</view>
+                            <view class="btn" data-item="{{item}}" bind:tap="cancelOrderTap">取消订单</view>
+                        </view>
+
+
+                        <view class="operate-btn" wx:if="{{item.status=='已发货'}}">
+                            <view class="btn" data-item="{{item}}" bind:tap="confrimReceipt">确认收货</view>
+                            <view class="btn" wx:if="{{item.logistics}}" data-item="{{item}}" bind:tap="logisticsTap">物流</view>
+
+                        </view>
+                        <view class="operate-btn" wx:if="{{item.status=='已完成'}}">
+    <view class="btn" data-item="{{item}}" bind:tap="returnGood">退货</view>
+    <view class="btn" data-item="{{item}}" bind:tap="orderDiscuss">评价</view>
+       </view>
+
+
+
+                        <view class="operate-btn" wx:if="{{item.status=='已支付'}}">
+                            <view class="btn" data-item="{{item}}" bind:tap="refundPriceClick">退款</view>
+
+<view class="btn" wx:if="{{item.logistics}}" data-item="{{item}}" bind:tap="logisticsTap">物流</view>
+</view>
+                    </view>
+
+                </view>
+            </scroll-view>
+
+        </view>
+    </block>
+</mp-tabs>

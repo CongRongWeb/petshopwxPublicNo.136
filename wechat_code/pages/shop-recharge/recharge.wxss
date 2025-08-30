@@ -1,0 +1,51 @@
+.content {
+padding: 100rpx;
+}
+
+.uni-form-item {
+margin-bottom: 40rpx;
+padding: 0;
+border-bottom: 1px solid #e3e3e3;
+
+
+}
+
+.uni-input {
+font-size: 30rpx;
+padding: 7px 0;
+}
+
+.column-with-btn {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+
+
+}
+
+:after {
+border: none
+}
+
+button {
+font-size: 24rpx;
+margin: 0;
+text-align: center;
+height: 88rpx;
+}
+
+
+
+.img-captcha {
+width: 150rpx;
+height: 60rpx;
+}
+
+
+
+.text-reset {
+text-align: center;
+margin-bottom: 100rpx;
+font-size: 36rpx;
+}

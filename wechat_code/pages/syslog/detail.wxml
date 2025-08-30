@@ -1,0 +1,81 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">用户名：</view>
+<view class="detail-item-text">{{detailList.username}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">用户操作：</view>
+<view class="detail-item-text">{{detailList.operation}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">请求方法：</view>
+<view class="detail-item-text">{{detailList.method}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">请求时长(毫秒)：</view>
+<view class="detail-item-text">{{detailList.time}}</view>
+</view>
+
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">ip地址：</view>
+<view class="detail-item-text">{{detailList.ip}}</view>
+</view>
+
+
+
+
+
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">请求参数</view>
+<view class="detail-item-text">{{detailList.params}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+
+
+</view>
+
+</view>
+</view>

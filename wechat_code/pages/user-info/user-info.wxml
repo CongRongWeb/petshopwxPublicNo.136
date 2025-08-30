@@ -1,0 +1,67 @@
+<view class="register-container">
+<view class="content">
+<view class="userInfo-from">
+    <!-- huiyuanzhanghao，普,去  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='huiyuan'}}"  >
+        <view class="item-label">会员账号</view>
+        <input  class="item-input" type="text"    disabled="true" placeholder="会员账号" model:value="{{huiyuanzhanghao}}" />
+    </view>
+    <!-- huiyuanxingming，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='huiyuan'}}"  >
+        <view class="item-label">会员姓名</view>
+        <input  class="item-input" type="text"    placeholder="会员姓名" model:value="{{huiyuanxingming}}" />
+    </view>
+    <!-- shouji，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='huiyuan'}}"  >
+        <view class="item-label">手机</view>
+        <input  class="item-input" type="text"    placeholder="手机" model:value="{{shouji}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='huiyuan'}}" >
+        <view  class="item-label"   bindtap="touxiangTap"  >头像</view>
+        <image class="item-img"   bindtap="touxiangTap"   src="{{tempPathtouxiang}}" mode="aspectFill"></image>
+    </view>
+    <view class="item-box" wx:if="{{tableName=='huiyuan'}}"  >
+        <view class="item-label">余额</view>
+        <input  class="item-input" type="text" placeholder="余额"  disabled="{{true}}" model:value="{{money}}" />
+    </view>
+    <!-- yuangongzhanghao，普,去  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">员工账号</view>
+        <input  class="item-input" type="text"    disabled="true" placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+    </view>
+    <!-- xingming，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">姓名</view>
+        <input  class="item-input" type="text"    placeholder="姓名" model:value="{{xingming}}" />
+    </view>
+    <!-- lianxifangshi，普,$column.unique  -->
+
+
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}"  >
+        <view class="item-label">联系方式</view>
+        <input  class="item-input" type="text"    placeholder="联系方式" model:value="{{lianxifangshi}}" />
+    </view>
+    <view class="item-box" wx:if="{{tableName=='yuangong'}}" >
+        <view  class="item-label"   bindtap="touxiangTap"  >头像</view>
+        <image class="item-img"   bindtap="touxiangTap"   src="{{tempPathtouxiang}}" mode="aspectFill"></image>
+    </view>
+<view class="btn-box">
+    <button class="save-btn" bindtap="saveTap">保存</button>
+    <button class="quite-btn" bindtap="quitTap">退出登录</button>
+
+</view>
+
+</view>
+
+</view>
+</view>

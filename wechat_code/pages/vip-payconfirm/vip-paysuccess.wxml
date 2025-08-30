@@ -1,0 +1,4 @@
+<view class="content">
+    <view class="text-reset">会员购买成功！</view>
+    <!-- <button type="primary" style="margin-top: 20rpx;color: #FFD;width: 300rpx;" bind:tap="back">返回</button> -->
+</view>

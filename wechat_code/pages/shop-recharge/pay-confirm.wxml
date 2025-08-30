@@ -1,0 +1,12 @@
+<view class="pay-container">
+    <view class="pay-content">
+        <radio-group class="pay-list" bindchange="payTap" value="{{defaultSel}}" class="radio-box">
+            <view class="pay-item" wx:for="{{list}}" wx:key="index">
+                <image class="img" mode="aspectFit" src="../../static/{{item.name}}.png"></image>
+                <radio value="{{item.value}}" checked="{{item.value==defaultSel}}"> </radio>
+            </view>
+        </radio-group>
+        <button type="primary" style="margin-top: 20rpx;color: #FFD;background: red;" bind:tap="onPageTap" data-url="recharge">确定</button>
+
+    </view>
+</view>

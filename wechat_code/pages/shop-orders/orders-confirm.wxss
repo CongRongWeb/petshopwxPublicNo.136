@@ -1,0 +1,121 @@
+.submit-container {
+width: 100vw;
+letter-spacing: 2rpx;
+font-size: 28rpx;
+height: 100vh;
+background-color: rgb(247, 247, 247);
+}
+
+
+
+.content {
+padding: 20rpx;
+}
+
+.operate {
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.address {
+width: inherit;
+display: flex;
+padding: 20rpx;
+justify-content: space-between;
+background-color: #ffffff;
+align-items: center;
+}
+
+.nodata {
+display: flex;
+width: 76vw;
+align-items: center;
+}
+
+.shop-list,
+.shop-item,
+.tab-header {
+border-top: 2rpx solid #eee;
+width: inherit;
+background-color: white;
+padding: 10rpx;
+}
+
+.tab-header {
+font-size: 24rpx;
+color: rgb(180, 178, 178);
+display: flex;
+justify-content: space-between;
+}
+
+.shop-item {
+max-height: 16vh;
+font-size: 24rpx;
+display: flex;
+align-items: center;
+}
+
+
+.price,
+.num,
+.total {
+width: 10vw;
+}
+
+.name,
+.shop-img {
+width: 20vw;
+margin-right: 5rpx;
+}
+
+.num {
+margin: 0 30rpx;
+}
+
+.remark {
+border: 2rpx solid #eee;
+width: 98%;
+height: 10vh;
+padding: 10rpx;
+}
+
+.total-box {
+display: flex;
+align-items: center;
+margin: 20rpx;
+
+}
+
+.pay-box {
+display: flex;
+flex-direction: column;
+margin-left: 67%;
+}
+
+
+
+button {
+width: 28vw;
+font-size: 28rpx;
+margin: 20rpx 0;
+}
+
+.price {
+margin: 0 45rpx;
+}
+
+.shop-img {
+height: 15vh;
+background-color: pink;
+}
+
+/* .name {} */
+
+
+
+
+.address-info {
+display: flex;
+flex-direction: column;
+}

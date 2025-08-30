@@ -1,0 +1,52 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">用户名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.username==true}}"  placeholder="用户名" model:value="{{username}}" />
+</view>
+<view class="item-box">
+<view class="item-label">用户操作</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.operation==true}}"  placeholder="用户操作" model:value="{{operation}}" />
+</view>
+<view class="item-box">
+<view class="item-label">请求方法</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.method==true}}"  placeholder="请求方法" model:value="{{method}}" />
+</view>
+<view class="item-box">
+<view class="item-label">请求时长(毫秒)</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.time==true}}"  placeholder="请求时长(毫秒)" model:value="{{time}}" />
+</view>
+<view class="item-box">
+<view class="item-label">ip地址</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.ip==true}}"  placeholder="ip地址" model:value="{{ip}}" />
+</view>
+
+
+
+<view class="item-box"  >
+<view class="item-label">请求参数</view>
+
+<textarea model:value="{{params}}" placeholder="请求参数"     data-info="{{params}}" maxlength="300" id="params"></textarea>
+</view>
+
+</view>
+
+
+<view class="btn-box">
+
+
+
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>

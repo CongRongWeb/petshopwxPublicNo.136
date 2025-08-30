@@ -1,0 +1,41 @@
+<view class="outerBox">
+    <!-- 头部物流信息 -->
+    <view class="navBox">
+        <view class="navLeftBox">
+            <view>
+                <image src="https://b.bdstatic.com/searchbox/icms/searchbox/img/zhongtonglogo.png"></image>
+            </view>
+            <view>中通快递</view>
+            <view>{{info.orderid}}</view>
+        </view>
+        <view class="navRightBox">
+            <text>订单号</text>
+            <!-- <text>|</text>
+            <text>电话</text> -->
+        </view>
+    </view>
+    <!-- 主体内容 -->
+    <view class="contantBox">
+        <!-- 通过数组长度判断显示内容 >0显示物流信息-->
+        <view wx:if="{{dataList.length > 0}}">
+            <view class="itemBox" wx:for="{{dataList}}" wx:key="index">
+                <!-- 左边线条 -->
+                <view class="itemLeftBox">
+                    <view class="lineBox">
+                        <view class="topLineBox {{index == 0 ? '' : 'longLineBox'}}"></view>
+                        <view class="bomLineBox {{index + 1 == dataList.length ? '' : 'longLineBox'}}"></view>
+                    </view>
+                    <image class="newestIconBox" src="https://s1.ax1x.com/2022/03/29/qySZi4.png" wx:if="{{index == 0}}"></image>
+                    <view class="dotBox" wx:else="{{index > 0}}"></view>
+                </view>
+                <!-- 右边内容 -->
+                <view class="rightBigBox {{index == 0 ? '' : 'oldTxtBox'}} {{index + 1 == dataList.length ? '' : 'borderBomBox'}}">
+                    <view>{{item.content}}</view>
+                    <view class="timeBox">{{item.time}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 通过数组长度判断显示内容 除了大于0之外显示暂无物流信息-->
+        <view class="notBox" wx:else>暂无物流信息</view>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cl.dao.JiyangrizhiDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.cl.entity.JiyangrizhiEntity" id="jiyangrizhiMap">
+        <result property="biaoti" column="biaoti"/>
+        <result property="neirong" column="neirong"/>
+        <result property="tupian" column="tupian"/>
+        <result property="shijian" column="shijian"/>
+        <result property="yuangongzhanghao" column="yuangongzhanghao"/>
+        <result property="yuangongxingming" column="yuangongxingming"/>
+        <result property="huiyuanzhanghao" column="huiyuanzhanghao"/>
+        <result property="huiyuanxingming" column="huiyuanxingming"/>
+        <result property="jiyangshipin" column="jiyangshipin"/>
+    </resultMap>
+
+    <select id="selectListView"
+		resultType="com.cl.entity.view.JiyangrizhiView" >
+
+		SELECT  jiyangrizhi.* FROM jiyangrizhi  jiyangrizhi 	        
+        <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+	<select id="selectView"
+		resultType="com.cl.entity.view.JiyangrizhiView" >
+		SELECT * FROM jiyangrizhi  jiyangrizhi <where> 1=1 ${ew.sqlSegment}</where>
+	</select>
+	
+
+</mapper>

@@ -1,0 +1,45 @@
+
+<view class="update-container">
+<view class="content">
+<view class="form-box">
+<view class="item-box">
+<view class="item-label">员工账号</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.yuangongzhanghao==true}}"  placeholder="员工账号" model:value="{{yuangongzhanghao}}" />
+</view>
+<view class="item-box">
+<view class="item-label">密码</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.mima==true}}"  placeholder="密码" model:value="{{mima}}" />
+</view>
+<view class="item-box">
+<view class="item-label">姓名</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.xingming==true}}"  placeholder="姓名" model:value="{{xingming}}" />
+</view>
+<view class="item-box">
+<view class="item-label">联系方式</view>
+<input  class="item-input"
+type="text"  disabled="{{ro.lianxifangshi==true}}"  placeholder="联系方式" model:value="{{lianxifangshi}}" />
+</view>
+<view class="item-box"    bindtap="uploadtouxiang">
+<view   class="item-label">头像</view>
+<image  src="{{touxiangPath?touxiangPath:imgIcon}}" mode="aspectFill"  class="item-img"></image>
+</view>
+
+
+
+</view>
+
+
+<view class="btn-box">
+
+
+
+<button     class="submit-btn" bindtap="submit">提交</button>
+</view>
+
+
+</view>
+
+</view>
